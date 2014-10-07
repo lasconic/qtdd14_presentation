@@ -103,9 +103,13 @@
 					</p>
 				</section>
 
-				<section>
-					Image of piano + tablets
-					Image of phone in metro
+				<section data-background="images/piano_paper.jpg">
+					<aside class="notes">
+						Starting in 2010, and ipad introduction, we wanted to put our sheet music on any device
+					</aside>
+				</section>	
+
+				<section data-background="images/piano_tablet.jpg">
 					<aside class="notes">
 						Starting in 2010, and ipad introduction, we wanted to put our sheet music on any device
 					</aside>
@@ -119,7 +123,7 @@
 					    <li>Connect to MuseScore.com and list scores</li>
 					    <li>Open external scores</li>
 					    <li>Render, display and play the scores</li>
-					    <li>Two apps per OS, one free, one paid</li>
+					    <li>Two apps per OS: free + paid</li>
 					</ul>
 					<aside class="notes">
 						So we had the desktop app, and now we wanted to develop a mobile app. We had severals possibilities,
@@ -153,11 +157,9 @@
 					<ul>
 					    <li class="fragment">Bring iOS and Android support</li>
 					    <li class="fragment">Qt Quick 2 and Controls</li>
-					    <li class="fragment">Qt Creator up to the job</li>
 					    <li class="fragment">QQuickPaintedItem</li>
 					</ul>
 				</section>
-
 
 				<section>
 					<h2>QQuickPaintedItem</h2>
@@ -165,11 +167,41 @@
 void QQuickPaintedItem::paint(QPainter * painter);
 					</code></pre>
 				</section>
+
+				<section>
+					<h2>A word about Qt Creator</h2>
+					<ul>
+						<li>Better every day</li>
+						<li>Refactoring</li>
+					    <li>Direct deployment on iOS and Android device and simulator</li>
+					    <li>Lacks: Packaging iOS, some Java support</li>
+					</ul>
+				</section>	
+
+				<section>
+					<h2>Qt Quick Compiler</h2>
+					<p>37% faster startup on iOS</p>
+				</section>	
+
 				<section>
 					<h1>App demo</h1>
 					<img width="200" src="images/100Library.png">
 					<img width="200" src="images/101Library_expanded_menu.png">
 					<img width="200" src="images/401Score_detail_popouts.png">		
+				</section>
+
+				<section>
+					<h2>Design choices</h2>
+					<ul>
+					    <li>No native theme</li>
+					    <li>A single UI scalable on all platforms</li>
+					    <li>Use more icons, less text</li>
+					</ul>
+					<aside class="notes">
+						Native theme too fragile or under developped
+						A single UI helps establishing the brand
+						Keep some basic mechanisms of mobile app
+					</aside>
 				</section>
 
 				<section>
@@ -187,6 +219,7 @@ void QQuickPaintedItem::paint(QPainter * painter);
       				</code></pre>
       				<aside class="notes">
       					mm exposed to QML, everything is computed based on it
+      					with some version of android, surprise, then use JNI
       				</aside>
 				</section>
 
@@ -269,17 +302,11 @@ Label {
 				</section>
 
 				<section>
-					<h2>A word about Qt Creator</h2>
-					<ul>
-						<li>Better every day</li>
-						<li>Refactoring</li>
-					    <li>Direct deployment on iOS and Android device and simulator</li>
-					    <li>Lacks: Packaging iOS, some Java support</li>
-					</ul>
+					<h2>http://blog.lasconic.com</h2>
 				</section>	
 
 				<section>
-					<h2>External services we use</h2>
+					<h2>Useful external services</h2>
 					<ul>
 					    <li class="fragment">Google Analytics</li>
 					    <li class="fragment">Crashlytics</li>
@@ -307,9 +334,12 @@ Label {
 					    	    <li>Samsung</li>
 					    	</ul>
 					    </li>
-					    <li>Smooth process with Apple and Google</li>
+					    <li>Don't use Ministro</li>
 					    <li>No copy protection for the moment</li>
 					</ul>
+					<aside class="notes">
+						Mention the screenshot pain, go into details if some time
+					</aside>
 				</section>	
 <!--
 				<section>
