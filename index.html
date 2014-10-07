@@ -118,12 +118,12 @@
 				<section>
 					<h2>Mobile apps features</h2>
 					<ul>
-					    <li>Android and iOS</li>
-					    <li>Not a full blown editor</li>
-					    <li>Connect to MuseScore.com and list scores</li>
-					    <li>Open external scores</li>
-					    <li>Render, display and play the scores</li>
-					    <li>Two apps per OS: free + paid</li>
+					    <li>Render, display and play the scores</li>					
+					    <li>Integrated with <a href="http://musescore.com">MuseScore.com</a> API</li>
+					    <li>Open external files</li>
+					    <li>For Android and iOS</li>
+					    <li>Free &amp; paid app</li>
+	
 					</ul>
 					<aside class="notes">
 						So we had the desktop app, and now we wanted to develop a mobile app. We had severals possibilities,
@@ -209,16 +209,8 @@ void QQuickPaintedItem::paint(QPainter * painter);
 					<ul>
 					    <li class="fragment">Use Screen DPI</li>
 					</ul>
-				</section>
-
-				<section>
-					<h2>Screen DPI</h2>
-					<pre><code>
-    QScreen* screen = QGuiApplication::primaryScreen();
-    qreal mm = screen->physicalDotsPerInch() / INCH; 
-      				</code></pre>
-      				<aside class="notes">
-      					mm exposed to QML, everything is computed based on it
+					<aside class="notes">
+      					QScreen, mm exposed to QML, everything is computed based on it
       					with some version of android, surprise, then use JNI
       				</aside>
 				</section>
